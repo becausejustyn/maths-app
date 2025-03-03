@@ -31,6 +31,13 @@ def percent_diff_server(input, output, session):
         percent_diff = ((new - start) / abs(start)) * 100
         
         # Determine style based on value
+        #match percent_diff:
+        #    case diff if diff > 0:
+        #        style = {"color_class": "text-success", "icon": "↑"}
+        #    case diff if diff < 0:
+        #        style = {"color_class": "text-danger", "icon": "↓"}
+        #    case _:
+        #        style = {"color_class": "text-muted", "icon": "→"}
         if percent_diff > 0:
             style = {"color_class": "text-success", "icon": "↑"}
         elif percent_diff < 0:
